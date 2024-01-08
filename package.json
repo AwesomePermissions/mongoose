@@ -1,0 +1,30 @@
+{
+  "name": "@awesomepermissions/mongoose",
+  "version": "1.0.0",
+  "description": "Awesome permissions library for mongoose",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "permissions",
+    "mongoose"
+  ],
+  "scripts": {
+    "dev": "nodemon test.js"
+  },
+  "author": {
+    "name": "Awesome permissions",
+    "email": "info@awesomepermissions.com",
+    "url": "https://awesomepermissions.com/"
+  },
+  "main": "lib/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@awesomepermissions/sdk": "^1.0.10"
+  },
+  "devDependencies": {
+    "mongoose": "^8.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
