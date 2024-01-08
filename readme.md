@@ -1,9 +1,9 @@
-# Awesome Permissions SDK
+# Awesome Permissions Mongoose
 
-[![NPM](https://img.shields.io/npm/l/@awesomepermissions/sdk)](https://github.com/awesomepermissions/sdk/blob/main/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/AwesomePermissions/sdk)](https://github.com/AwesomePermissions/sdk/graphs/contributors)
-[![npm](https://img.shields.io/npm/v/@awesomepermissions/sdk)](https://www.npmjs.com/package/@awesomepermissions/sdk)
-[![npm](https://img.shields.io/npm/dm/@awesomepermissions/sdk)](https://www.npmjs.com/package/@awesomepermissions/sdk)
+[![NPM](https://img.shields.io/npm/l/@awesomepermissions/mongoose)](https://github.com/awesomepermissions/mongoose/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/AwesomePermissions/mongoose)](https://github.com/AwesomePermissions/mongoose/graphs/contributors)
+[![npm](https://img.shields.io/npm/v/@awesomepermissions/mongoose)](https://www.npmjs.com/package/@awesomepermissions/mongoose)
+[![npm](https://img.shields.io/npm/dm/@awesomepermissions/mongoose)](https://www.npmjs.com/package/@awesomepermissions/mongoose)
 
 Currently in progress.
 
@@ -11,29 +11,18 @@ Website: [`https://www.awesomepermissions.com`](https://www.awesomepermissions.c
 
 ## Installation
 ```shell
-npm install @awesomepermissions/sdk
+npm install @awesomepermissions/mongoose
 ```
 
 ## Usage
 ```javascript
-const AwesomePermissions = require('@awesomepermissions/sdk');
-const awp = new AwesomePermissions({ accessKey: 'your_access_key' });
-
-const result = await awp.addPermissionsToItems({
-    items: ['user-id'],
-    itemTypes: ['user'],
-    permissions: ['image-id'],
-    actions: ['view'],
-    ignoreDuplicateErrors: true,
-});
+Currently in progress
 ```
-
-For more information, please refer to the [`documentation`](https://www.awesomepermissions.com/docs)
 
 ## Contributors
 
-<a href="https://github.com/AwesomePermissions/sdk/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AwesomePermissions/sdk" />
+<a href="https://github.com/AwesomePermissions/mongoose/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AwesomePermissions/mongoose" />
 </a>
 
 ## License
