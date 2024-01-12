@@ -1,5 +1,4 @@
 const MongooseAwesomePermissions = require('./lib');
-const {Schema, model} = require("mongoose");
 const mongoose = require("mongoose");
 
 (async () => {
@@ -11,34 +10,29 @@ const mongoose = require("mongoose");
 
         await mongoose.connect('mongodb://127.0.0.1:27017/mongoose-awp-test');
 
-        const gameSchema = new Schema({ title: String });
-        const userSchema = new Schema({ name: String });
+        const gameSchema = new mongoose.Schema({ title: String });
+        const userSchema = new mongoose.Schema({ name: String });
         gameSchema.plugin(awp.loadSchema());
         userSchema.plugin(awp.loadSchema());
 
-        const Game = model('Game', gameSchema);
-        const User = model('User', userSchema);
+        const Game = mongoose.model('Game', gameSchema);
+        const User = mongoose.model('User', userSchema);
 
         const game = new Game({ title: 'Game 1' });
         const user = new User({ name: 'User 1' });
-        const user2 = new User({ name: 'User 3' });
-
-        await Game.insertMany([{ title: 'Game 2' }, { title: 'Game 3' }]);
 
         await game.save();
         await user.save();
-        await user2.save();
 
         await user.addViewPermissionsToItems(game);
-        const hasPermission = await user.hasViewPermissionToItem(game._id.toString());
+        const hasPermission = await user.hasViewPermissionToItem(game);
+        console.log('hasPermission', hasPermission);
         const itemsWithPermissions = await user.getItemsWithViewPermission();
         console.log('itemsWithPermissions', itemsWithPermissions);
 
         await Game.deleteOne({_id: game._id});
-
         await User.findByIdAndDelete(user._id);
 
-        await User.findOneAndDelete({_id: user2._id});
 
         process.exit();
 
