@@ -20,3 +20,7 @@ A
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 >
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
+V
+&node_modules/mongoose/types/query.d.ts,c\1\c17a95a299b5b22526af3b1493f3510ddab2e3ba
+W
+'node_modules/mongoose/types/models.d.ts,c\2\c275b462e747586275175bb572e8fa5b4e46d9de

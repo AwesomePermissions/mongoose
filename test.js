@@ -29,12 +29,15 @@ const mongoose = require("mongoose");
         await user.save();
         await user2.save();
 
-        await user.addPermissionsToItems(game);
-        const hasPermission = await user.hasPermissionToItem(game);
-        console.log('hasPermission', hasPermission);
+        await user.addViewPermissionsToItems(game);
+        const hasPermission = await user.hasViewPermissionToItem(game._id.toString());
+        const itemsWithPermissions = await user.getItemsWithViewPermission();
+        console.log('itemsWithPermissions', itemsWithPermissions);
 
         await Game.deleteOne({_id: game._id});
+
         await User.findByIdAndDelete(user._id);
+
         await User.findOneAndDelete({_id: user2._id});
 
         process.exit();
