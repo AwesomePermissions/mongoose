@@ -1,6 +1,6 @@
 {
   "name": "@awesomepermissions/mongoose",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Awesome permissions library for mongoose",
   "publishConfig": {
     "access": "public",
